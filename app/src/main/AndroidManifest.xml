@@ -19,6 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SetupActivity" />
+        <activity android:name=".Setup2Activity" />
+        <activity android:name=".FinalActivity"></activity>
     </application>
 
 </manifest>

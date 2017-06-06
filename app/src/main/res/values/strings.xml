@@ -2,4 +2,19 @@
     <string name="app_name">Fightcave Rotations</string>
     <string name="action_settings">Settings</string>
     <string name="action_howto">How to use</string>
+    <string name="start">Start</string>
+    <string name="firstSpawn">Wave 1 spawn location:</string>
+    <string name="secondSpawn">Wave 2 spawn locations:</string>
+    <string name="current_wave">Current wave: </string>
+    <string name="nw">NW</string>
+    <string name="center">Center</string>
+    <string name="grid">Grid representing fightcaves</string>
+    <string name="se">SE</string>
+    <string name="south">South</string>
+    <string name="sw">SW</string>
+    <string name="next_wave">Next wave</string>
+    <string name="error_unknown">You broke the app ;(</string>
+    <string name="error_checked_zero">You didn\'t select anything.</string>
+    <string name="error_wrong_selection">You didn\'t select correctly.</string>
+    <string name="error_checked_two">There is only 1 spawn this wave.</string>
 </resources>
