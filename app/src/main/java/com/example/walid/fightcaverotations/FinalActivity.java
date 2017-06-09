@@ -44,8 +44,6 @@ public class FinalActivity extends AppCompatActivity {
             start = start + 4;
             wave = 5;
             PrintWave(start, wave);
-            wave++;
-            start++;
         }
 
         buttonNextWave.setOnClickListener(new View.OnClickListener() {
@@ -55,10 +53,10 @@ public class FinalActivity extends AppCompatActivity {
                 if (wave >= 63) {
                     //TODO: change button, reset to start, ???
                 } else {
-                    clearAllLabelsAndLists();
-                    PrintWave(start, wave);
                     wave++;
                     start++;
+                    clearAllLabelsAndLists();
+                    PrintWave(start, wave);
                 }
             }
         });
@@ -79,15 +77,15 @@ public class FinalActivity extends AppCompatActivity {
 
     }
 
-    public List monsters = new ArrayList();
-    public List locations = new ArrayList();
+    private List<String> monsters = new ArrayList<>();
+    private List<String> locations = new ArrayList<>();
 
     private void PrintWave(int start, int wave) {
         TextView textCurrentWave = (TextView) findViewById(R.id.textCurrentWave);
 
         int i = 0;
         int currentWave = wave;
-        textCurrentWave.setText(Integer.toString(wave));
+        textCurrentWave.setText(String.format("%d", wave));
 
         if (currentWave == 63) {
             JadSpawn((start) % 15);
@@ -100,7 +98,6 @@ public class FinalActivity extends AppCompatActivity {
             i++;
         }
         PrintSpawns();
-        return;
     }
 
     private void JadSpawn(int start) {
@@ -187,45 +184,45 @@ public class FinalActivity extends AppCompatActivity {
 
     private void PrintSpawns() {
         for (int j = 0; j < monsters.size(); j++) {
-            switch (locations.get(j).toString()) {
+            switch (locations.get(j)) {
                 case "NW":
                     if (!textNW.getText().equals("")) {
-                        textNW.append(" | " + monsters.get(j).toString());
+                        textNW.append(" | " + monsters.get(j));
                     } else {
-                        textNW.setText(monsters.get(j).toString());
-                        textNW.setTextColor(getColor(monsters.get(j).toString()));
+                        textNW.setText(monsters.get(j));
+                        textNW.setTextColor(getColor(monsters.get(j)));
                     }
                     break;
                 case "South":
                     if (!textSouth.getText().equals("")) {
-                        textSouth.append(" | " + monsters.get(j).toString());
+                        textSouth.append(" | " + monsters.get(j));
                     } else {
-                        textSouth.setText(monsters.get(j).toString());
-                        textSouth.setTextColor(getColor(monsters.get(j).toString()));
+                        textSouth.setText(monsters.get(j));
+                        textSouth.setTextColor(getColor(monsters.get(j)));
                     }
                     break;
                 case "SE":
                     if (!textSE.getText().equals("")) {
-                        textSE.append(" | " + monsters.get(j).toString());
+                        textSE.append(" | " + monsters.get(j));
                     } else {
-                        textSE.setText(monsters.get(j).toString());
-                        textSE.setTextColor(getColor(monsters.get(j).toString()));
+                        textSE.setText(monsters.get(j));
+                        textSE.setTextColor(getColor(monsters.get(j)));
                     }
                     break;
                 case "Center":
                     if (!textCenter.getText().equals("")) {
-                        textCenter.append(" | " + monsters.get(j).toString());
+                        textCenter.append(" | " + monsters.get(j));
                     } else {
-                        textCenter.setText(monsters.get(j).toString());
-                        textCenter.setTextColor(getColor(monsters.get(j).toString()));
+                        textCenter.setText(monsters.get(j));
+                        textCenter.setTextColor(getColor(monsters.get(j)));
                     }
                     break;
                 case "SW":
                     if (!textSW.getText().equals("")) {
-                        textSW.append(" | " + monsters.get(j).toString());
+                        textSW.append(" | " + monsters.get(j));
                     } else {
-                        textSW.setText(monsters.get(j).toString());
-                        textSW.setTextColor(getColor(monsters.get(j).toString()));
+                        textSW.setText(monsters.get(j));
+                        textSW.setTextColor(getColor(monsters.get(j)));
                     }
                     break;
                 default:
