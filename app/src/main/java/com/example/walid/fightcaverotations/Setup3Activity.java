@@ -1,5 +1,7 @@
 package com.example.walid.fightcaverotations;
 
+import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,8 +31,26 @@ public class Setup3Activity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                if (getStart() == -1) {
+                    Snackbar.make(v, getString(R.string.error_wrong_selection), Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                } else {
+                    Intent intent = new Intent(Setup3Activity.this, FinalActivity.class);
+                    intent.putExtra("start", getStart());
+                    startActivity(intent);
+                }
             }
         });
+    }
+
+    private int getStart() {
+        int start = -1;
+
+        if (checkCenter.isChecked() && checkSE.isChecked() && !checkSouth.isChecked()){
+            start = 6;
+        } else if (checkCenter.isChecked() && !checkSE.isChecked() && checkSouth.isChecked()) {
+            start = 11;
+        }
+
+        return start;
     }
 }

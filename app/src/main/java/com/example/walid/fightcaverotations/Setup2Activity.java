@@ -29,7 +29,7 @@ public class Setup2Activity extends AppCompatActivity {
         checkSouth = (CheckBox) findViewById(R.id.checkSouth);
         checkSE = (CheckBox) findViewById(R.id.checkSE);
 
-        buttonNext.setOnClickListener(new View.OnClickListener(){
+        buttonNext.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -108,70 +108,70 @@ public class Setup2Activity extends AppCompatActivity {
         }
 
         //Center && SE
-        if (!checkNW.isChecked() && !checkSW.isChecked() && checkCenter.isChecked() && checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 1) {
+        else if (!checkNW.isChecked() && !checkSW.isChecked() && checkCenter.isChecked() && checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 1) {
             start = 7;
         }
         //Center && South
-        if (!checkNW.isChecked() && !checkSW.isChecked() && checkCenter.isChecked() && !checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 1) {
+        else if (!checkNW.isChecked() && !checkSW.isChecked() && checkCenter.isChecked() && !checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 1) {
             start = 12;
         }
 
         /** 2 **/
         //NW && SW
-        if (checkNW.isChecked() && checkSW.isChecked() && !checkCenter.isChecked() && !checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 2) {
+        else if (checkNW.isChecked() && checkSW.isChecked() && !checkCenter.isChecked() && !checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 2) {
             start = 2;
         }
 
         //SE && SW
-        if (!checkNW.isChecked() && checkSW.isChecked() && !checkCenter.isChecked() && checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 2) {
+        else if (!checkNW.isChecked() && checkSW.isChecked() && !checkCenter.isChecked() && checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 2) {
             start = 8;
         }
 
         //South && SE
-        if (!checkNW.isChecked() && !checkSW.isChecked() && !checkCenter.isChecked() && checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 2) {
+        else if (!checkNW.isChecked() && !checkSW.isChecked() && !checkCenter.isChecked() && checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 2) {
             start = 8;
         }
 
         /** 3 **/
         //SW && Center
-        if (!checkNW.isChecked() && checkSW.isChecked() && checkCenter.isChecked() && !checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 3) {
+        else if (!checkNW.isChecked() && checkSW.isChecked() && checkCenter.isChecked() && !checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 3) {
             start = 0;
         }
 
         //South && NW
-        if (checkNW.isChecked() && !checkSW.isChecked() && !checkCenter.isChecked() && !checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 3) {
+        else if (checkNW.isChecked() && !checkSW.isChecked() && !checkCenter.isChecked() && !checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 3) {
             start = 5;
         }
 
         //SW && South
-        if (!checkNW.isChecked() && checkSW.isChecked() && !checkCenter.isChecked() && !checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 3) {
+        else if (!checkNW.isChecked() && checkSW.isChecked() && !checkCenter.isChecked() && !checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 3) {
             start = 9;
         }
 
         /** 4 **/
         //SW && SE
-        if (!checkNW.isChecked() && checkSW.isChecked() && !checkCenter.isChecked() && checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 4) {
+        else if (!checkNW.isChecked() && checkSW.isChecked() && !checkCenter.isChecked() && checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 4) {
             start = 14;
         }
 
         //NW && Center
-        if (checkNW.isChecked() && !checkSW.isChecked() && checkCenter.isChecked() && !checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 4) {
+        else if (checkNW.isChecked() && !checkSW.isChecked() && checkCenter.isChecked() && !checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 4) {
             start = 99;
         }
 
         /** 5 **/
         //NW && Center
-        if (checkNW.isChecked() && !checkSW.isChecked() && checkCenter.isChecked() && !checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 5) {
+        else if (checkNW.isChecked() && !checkSW.isChecked() && checkCenter.isChecked() && !checkSE.isChecked() && !checkSouth.isChecked() && spawnWave1 == 5) {
             start = 1;
         }
 
         //South && SE
-        if (!checkNW.isChecked() && !checkSW.isChecked() && !checkCenter.isChecked() && checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 5) {
+        else if (!checkNW.isChecked() && !checkSW.isChecked() && !checkCenter.isChecked() && checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 5) {
             start = 4;
         }
 
         //NW && South
-        if (checkNW.isChecked() && !checkSW.isChecked() && !checkCenter.isChecked() && !checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 5) {
+        else if (checkNW.isChecked() && !checkSW.isChecked() && !checkCenter.isChecked() && !checkSE.isChecked() && checkSouth.isChecked() && spawnWave1 == 5) {
             start = 10;
         }
 
