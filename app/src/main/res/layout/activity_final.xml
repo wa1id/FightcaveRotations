@@ -59,7 +59,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="36dp"
-        android:text="3"
+        android:text="4"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textColor="@android:color/holo_red_light"
         android:textStyle="bold"

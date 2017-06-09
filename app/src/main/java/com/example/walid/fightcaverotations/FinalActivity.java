@@ -15,7 +15,7 @@ import java.util.List;
 
 public class FinalActivity extends AppCompatActivity {
 
-    int start;
+    int start = -1;
     int wave = 4;
     TextView textNW;
     TextView textSouth;
@@ -39,8 +39,14 @@ public class FinalActivity extends AppCompatActivity {
 
         if (start != 6 && start != 11) {
             PrintWave(start + 2, 3);
+            start = start + 3;
+        } else {
+            start = start + 4;
+            wave = 5;
+            PrintWave(start, wave);
+            wave++;
+            start++;
         }
-        start = start + 3;
 
         buttonNextWave.setOnClickListener(new View.OnClickListener() {
 
@@ -49,10 +55,10 @@ public class FinalActivity extends AppCompatActivity {
                 if (wave >= 63) {
                     //TODO: change button, reset to start, ???
                 } else {
-                    wave++;
-                    start++;
                     clearAllLabelsAndLists();
                     PrintWave(start, wave);
+                    wave++;
+                    start++;
                 }
             }
         });
