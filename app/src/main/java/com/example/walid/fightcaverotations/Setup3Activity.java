@@ -10,7 +10,7 @@ import android.widget.CheckBox;
 
 public class Setup3Activity extends AppCompatActivity {
 
-    private CheckBox checkCenter;
+    private CheckBox checkSW;
     private CheckBox checkSouth;
     private CheckBox checkSE;
 
@@ -19,12 +19,13 @@ public class Setup3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup3);
 
-        checkCenter = (CheckBox) findViewById(R.id.checkCenter);
         checkSouth = (CheckBox) findViewById(R.id.checkSouth);
         checkSE = (CheckBox) findViewById(R.id.checkSE);
-        checkCenter.setVisibility(View.VISIBLE);
+        checkSW = (CheckBox) findViewById(R.id.checkSW);
         checkSouth.setVisibility(View.VISIBLE);
         checkSE.setVisibility(View.VISIBLE);
+        checkSW.setVisibility(View.VISIBLE);
+
         Button buttonNextWave = (Button) findViewById(R.id.buttonNext);
 
         buttonNextWave.setOnClickListener(new View.OnClickListener(){
@@ -45,9 +46,9 @@ public class Setup3Activity extends AppCompatActivity {
     private int getStart() {
         int start = -1;
 
-        if (checkCenter.isChecked() && checkSE.isChecked() && !checkSouth.isChecked()){
+        if (checkSW.isChecked() && checkSE.isChecked() && !checkSouth.isChecked()){
             start = 6;
-        } else if (checkCenter.isChecked() && !checkSE.isChecked() && checkSouth.isChecked()) {
+        } else if (!checkSW.isChecked() && checkSE.isChecked() && checkSouth.isChecked()) {
             start = 11;
         }
 

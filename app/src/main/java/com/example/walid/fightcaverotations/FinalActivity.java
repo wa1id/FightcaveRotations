@@ -37,7 +37,9 @@ public class FinalActivity extends AppCompatActivity {
         textCenter = (TextView) findViewById(R.id.textCenter);
         textSW = (TextView) findViewById(R.id.textSW);
 
-        PrintWave(start + 2, 3);
+        if (start != 6 && start != 11) {
+            PrintWave(start + 2, 3);
+        }
         start = start + 3;
 
         buttonNextWave.setOnClickListener(new View.OnClickListener() {
