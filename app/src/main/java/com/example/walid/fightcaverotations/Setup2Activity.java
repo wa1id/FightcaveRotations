@@ -26,7 +26,7 @@ public class Setup2Activity extends AppCompatActivity {
                 } else if (getStart() == 99) {
                     //TODO: go to next intent and setup handicap wave
                 } else {
-                    Intent intent = new Intent(getApplicationContext(), FinalActivity.class);
+                    Intent intent = new Intent(Setup2Activity.this, FinalActivity.class);
                     intent.putExtra("start", getStart());
                     startActivity(intent);
                 }
@@ -44,7 +44,7 @@ public class Setup2Activity extends AppCompatActivity {
         CheckBox checkSE = (CheckBox) findViewById(R.id.checkSE);
 
         if (getIntent().getIntExtra("checked", 0) == 0) {
-            //TODO: Print error
+            //TODO: Print error, it cannot be 0...
         }
 
         //Show correct checkboxes
