@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".SetupActivity" />
         <activity android:name=".Setup2Activity" />
-        <activity android:name=".FinalActivity"></activity>
+        <activity android:name=".FinalActivity" />
+        <activity android:name=".Setup3Activity"></activity>
     </application>
 
 </manifest>

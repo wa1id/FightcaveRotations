@@ -7,8 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 public class Setup2Activity extends AppCompatActivity {
+
+    private CheckBox checkNW;
+    private CheckBox checkCenter;
+    private CheckBox checkSW;
+    private CheckBox checkSouth;
+    private CheckBox checkSE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +23,11 @@ public class Setup2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_setup2);
 
         Button buttonNext = (Button) findViewById(R.id.buttonNext);
+        checkNW = (CheckBox) findViewById(R.id.checkNW);
+        checkCenter = (CheckBox) findViewById(R.id.checkCenter);
+        checkSW = (CheckBox) findViewById(R.id.checkSW);
+        checkSouth = (CheckBox) findViewById(R.id.checkSouth);
+        checkSE = (CheckBox) findViewById(R.id.checkSE);
 
         buttonNext.setOnClickListener(new View.OnClickListener(){
 
@@ -24,7 +36,8 @@ public class Setup2Activity extends AppCompatActivity {
                 if (getStart() == -1) {
                     Snackbar.make(view, getString(R.string.error_wrong_selection), Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 } else if (getStart() == 99) {
-                    //TODO: go to next intent and setup handicap wave
+                    Intent intent = new Intent(Setup2Activity.this, Setup3Activity.class);
+                    startActivity(intent);
                 } else {
                     Intent intent = new Intent(Setup2Activity.this, FinalActivity.class);
                     intent.putExtra("start", getStart());
@@ -37,11 +50,6 @@ public class Setup2Activity extends AppCompatActivity {
     }
 
     private void ShowCorrectCheckboxes() {
-        CheckBox checkNW = (CheckBox) findViewById(R.id.checkNW);
-        CheckBox checkCenter = (CheckBox) findViewById(R.id.checkCenter);
-        CheckBox checkSW = (CheckBox) findViewById(R.id.checkSW);
-        CheckBox checkSouth = (CheckBox) findViewById(R.id.checkSouth);
-        CheckBox checkSE = (CheckBox) findViewById(R.id.checkSE);
 
         if (getIntent().getIntExtra("checked", 0) == 0) {
             //TODO: Print error, it cannot be 0...
@@ -90,12 +98,6 @@ public class Setup2Activity extends AppCompatActivity {
     }
 
     private int getStart() {
-        CheckBox checkNW = (CheckBox) findViewById(R.id.checkNW);
-        CheckBox checkCenter = (CheckBox) findViewById(R.id.checkCenter);
-        CheckBox checkSW = (CheckBox) findViewById(R.id.checkSW);
-        CheckBox checkSouth = (CheckBox) findViewById(R.id.checkSouth);
-        CheckBox checkSE = (CheckBox) findViewById(R.id.checkSE);
-
         int start = -1;
         int spawnWave1 = getIntent().getIntExtra("checked", 0);
 

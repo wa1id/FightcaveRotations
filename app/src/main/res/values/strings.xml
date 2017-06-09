@@ -19,4 +19,5 @@
     <string name="error_checked_two">There is only 1 spawn this wave.</string>
     <string name="prev_wave">Back</string>
     <string name="compass">compass</string>
+    <string name="wave_4">Wave 4 spawn locations:</string>
 </resources>
