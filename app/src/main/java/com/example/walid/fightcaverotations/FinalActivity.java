@@ -12,6 +12,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class FinalActivity extends AppCompatActivity {
 
@@ -85,7 +86,7 @@ public class FinalActivity extends AppCompatActivity {
 
         int i = 0;
         int currentWave = wave;
-        textCurrentWave.setText(String.format("%d", wave));
+        textCurrentWave.setText(String.format(Locale.US, "%d", wave));
 
         if (currentWave == 63) {
             JadSpawn((start) % 15);
