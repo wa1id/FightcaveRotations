@@ -2,7 +2,7 @@
     <string name="app_name">Fightcave Rotations</string>
     <string name="action_reset">Reset</string>
     <string name="action_howto">How to use</string>
-    <string name="start">Start</string>
+    <string name="ready">I\'m ready!</string>
     <string name="firstSpawn">Wave 1 spawn location:</string>
     <string name="secondSpawn">Wave 2 spawn locations:</string>
     <string name="current_wave">Current wave: </string>
@@ -20,4 +20,7 @@
     <string name="prev_wave">Back</string>
     <string name="compass">compass</string>
     <string name="wave_4">Wave 4 spawn locations:</string>
+    <string name="how_to_use">How to use:</string>
+    <string name="howto1">- Select the location of the 1st and 2nd wave spawns. If required, also select the locations on wave 4.</string>
+    <string name="howto2">- Click the \"Next wave\" and \"Back\" buttons to navigate through the waves.</string>
 </resources>

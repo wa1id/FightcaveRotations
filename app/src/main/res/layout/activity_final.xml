@@ -20,7 +20,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageGrid"
         app:layout_constraintHorizontal_bias="0.921"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintVertical_bias="0.529"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -34,7 +36,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.459" />
+        app:layout_constraintHorizontal_bias="0.459"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <ImageView
         android:id="@+id/imageGrid"
@@ -50,7 +54,9 @@
         app:layout_constraintVertical_bias="0.304"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/textCurrentWave"
@@ -67,7 +73,9 @@
         app:layout_constraintLeft_toRightOf="@+id/textView"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,RtlHardcoded" />
+        tools:ignore="HardcodedText,RtlHardcoded"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/textNW"
@@ -86,7 +94,9 @@
         app:layout_constraintRight_toRightOf="@+id/imageGrid"
         app:layout_constraintTop_toTopOf="@+id/imageGrid"
         app:layout_constraintVertical_bias="0.011"
-        tools:ignore="RtlHardcoded" />
+        tools:ignore="RtlHardcoded"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/textSE"
@@ -100,7 +110,9 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/textSouth"
         app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintLeft_toRightOf="@+id/textSouth"
-        app:layout_constraintRight_toRightOf="@+id/imageGrid" />
+        app:layout_constraintRight_toRightOf="@+id/imageGrid"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/textSouth"
@@ -117,7 +129,9 @@
         app:layout_constraintLeft_toLeftOf="@+id/imageGrid"
         app:layout_constraintRight_toRightOf="@+id/imageGrid"
         app:layout_constraintTop_toTopOf="@+id/imageGrid"
-        app:layout_constraintVertical_bias="0.87" />
+        app:layout_constraintVertical_bias="0.87"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/textCenter"
@@ -135,7 +149,9 @@
         app:layout_constraintLeft_toLeftOf="@+id/imageGrid"
         app:layout_constraintRight_toRightOf="@+id/imageGrid"
         app:layout_constraintTop_toTopOf="@+id/imageGrid"
-        app:layout_constraintVertical_bias="0.65" />
+        app:layout_constraintVertical_bias="0.65"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/textSW"
@@ -149,7 +165,9 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/textSouth"
         app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintLeft_toLeftOf="@+id/imageGrid"
-        app:layout_constraintRight_toLeftOf="@+id/textSouth" />
+        app:layout_constraintRight_toLeftOf="@+id/textSouth"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <Button
         android:id="@+id/buttonPrev"
@@ -165,7 +183,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/buttonNext"
         app:layout_constraintTop_toBottomOf="@+id/imageGrid"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintVertical_bias="0.529"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -179,6 +199,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/compass" />
+        app:srcCompat="@drawable/compass"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
 </android.support.constraint.ConstraintLayout>
