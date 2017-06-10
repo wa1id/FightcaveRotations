@@ -35,6 +35,7 @@ public class FinalActivity extends AppCompatActivity {
 
         Button buttonNextWave = (Button) findViewById(R.id.buttonNext);
         Button buttonPrevWave = (Button) findViewById(R.id.buttonPrev);
+        final Button buttonReset = (Button) findViewById(R.id.buttonReset);
         start = getIntent().getIntExtra("start", -1);
         textNW = (TextView) findViewById(R.id.textNW);
         textSouth = (TextView) findViewById(R.id.textSouth);
@@ -56,7 +57,7 @@ public class FinalActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (wave >= 63) {
-                    //TODO: change button, reset to start, ???
+                    buttonReset.setVisibility(View.VISIBLE);
                 } else {
                     wave++;
                     start++;
@@ -76,6 +77,17 @@ public class FinalActivity extends AppCompatActivity {
                     clearAllLabelsAndLists();
                     PrintWave(start, wave);
                 }
+            }
+        });
+
+        buttonReset.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.putExtra("EXIT", true);
+            startActivity(intent);
             }
         });
 
